@@ -7,13 +7,13 @@ def encode_base64 (s: str) -> str:
     ascii_string = ''
     for i in range(0, len(s), 2):
         ascii_string += chr(int(s[i:i + 2], 16))
+    print('/hidden -', ascii_string)
     ascii_string = ascii_string.encode('ascii')
     base64_bytes = base64.b64encode( ascii_string )
-    print('/ascii:', ascii_string)
     return base64_bytes.decode('ascii')
 
 res = encode_base64( xstr )
-print('/encoded:', res)
+print('/encoded -', res)
 
 assert res == comp
 
