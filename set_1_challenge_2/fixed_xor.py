@@ -6,7 +6,11 @@ def hex_str_to_int_list(s: str):
 
 L, R = hex_str_to_int_list( hex1 ), hex_str_to_int_list( hex2 )
 xor = [hex(l ^ r)[2:]  for l, r in zip(L, R)]
+
 res = ''.join(xor)
 res2 = ''.join([chr(int(l ^ r))  for l, r in zip(L, R)])
+
 print('/res', res)
 print('/hidden -', res2)
+
+assert res == '746865206b696420646f6e277420706c6179'
