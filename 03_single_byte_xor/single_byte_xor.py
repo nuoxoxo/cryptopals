@@ -15,9 +15,10 @@ def decipher_bruteforce( hex_cipher: str):
 
 cipher = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 
-# brute force it
-decipher_bruteforce( cipher )
+if __name__ == "__main__":
+    # brute force it
+    decipher_bruteforce( cipher )
 
-# now that 'X' seems correct
-res = unhexify_xor( ord('X'), cipher )
-print('/hidden -', res)
+    # now that 'X' seems correct
+    res = unhexify_xor( ord('X'), cipher )
+    print('/hidden -', res)
