@@ -1,10 +1,10 @@
-def unhexify_xor ( key: int, hex_string: str ) -> str:
+def unhexify_xor ( key: int, hex_string: bytes ) -> bytes:
     res = ''
     for i in range(0, len( hex_string ), 2):
         res += chr(int(hex_string[i:i + 2], 16) ^ key)
     return res
 
-def decipher_bruteforce( hex_cipher: str):
+def decipher_bruteforce( hex_cipher: bytes):
     # try : ascii [32,126]
     for candidate_char in range(32, 127):
         if not chr(candidate_char).isalpha():
