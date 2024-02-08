@@ -8,6 +8,7 @@ def Print_dict_sorted (D):
     for k, v in dict(sorted(D.items())).items(): print(k, v)
     print('/print dict ends')
 
+
 """
 Get a model Score : from a piece of plaintext - eg. moby dick
 """
@@ -20,7 +21,7 @@ def get_freq(text: bytes) -> dict:
     # Print_dict (alpha_count)
     size = len(text)
     freq = { c: round(alpha_count[c] / size, 8) for c in ascii_letters }
-    # Print_dict( freq )
+    Print_dict( freq )
     return freq
 
 
@@ -60,11 +61,11 @@ def decipher_xored_hex_string (cipher: bytes, model) -> list:
 
 
 if __name__ == "__main__":
-    from single_byte_xor import unhexify_xor # my func
+    from single_byte_xor___bruteforce import unhexify_xor
     text = open('mobydick.txt').read() # moby dick
     frequencies = get_freq_alpha_only (text)
     cipher = open('3.in').read().strip()
     res = decipher_xored_hex_string(cipher, frequencies)
-    for tup in res: print(tup)
+    for i, tup in enumerate(res): print(str(i)+'/', tup)
     print('\n/res', res[0])
 

@@ -60,6 +60,6 @@ if __name__ == "__main__":
     for cipher in ciphers:
         temp = decipher_xored_hex_string(cipher, frequencies)
         A.append(temp)
-    for a in sorted(A,reverse=True):print(a)
-    print('/min:', min(A))
+    for i, a in enumerate( sorted(A,reverse=True) ):print(str(i)+'/', a)
+    print('\n/min:', min(A), '@', A.index(min(A)))
 
