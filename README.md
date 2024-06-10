@@ -1,6 +1,6 @@
 ### Crypto Challenge Set 1
 1. Convert hex to base64
-  - run `c++ -std=c++2a -lssl -lcrypto _.cc && ./a.out`
+- run : `c++ -std=c++2a -lssl -lcrypto _.cc && ./a.out`
 2. Fixed XOR
 3. Single-byte XOR cipher
 4. Detect single-character XOR
