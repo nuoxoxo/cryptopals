@@ -1,6 +1,6 @@
 # trying to decode base64 encoded strings
 
-def base64decoding(s: str) -> str:
+def base64_to_asciiStr(s: str) -> str:
     b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
     bs = ''
     for c in s:
@@ -18,13 +18,13 @@ def base64decoding(s: str) -> str:
         res += chr(int(trunk, 2))
     return res
 
-r1 = base64decoding('QW5k')
+r1 = base64_to_asciiStr('QW5k')
 print('r1/', r1)
 
-r2 = base64decoding('Zw')
+r2 = base64_to_asciiStr('Zw')
 print('r2/', r2)
 
-r3 = base64decoding('Z20')
+r3 = base64_to_asciiStr('Z20')
 print('r3/', r3)
 
 assert r1 == 'And'
