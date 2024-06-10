@@ -1,12 +1,16 @@
-std::string HexStr = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
 
 #include "iostream"
 #include "openssl/bio.h"
 #include "openssl/evp.h"
 #include "openssl/buffer.h"
 
+
+std::string HexStr = "49276d206b696c6c696e6720796f757220\
+627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
+
 std::string decode_hex_string (const std::string &);
 std::string encode_base64 (const std::string &);
+
 
 int main ()
 {
